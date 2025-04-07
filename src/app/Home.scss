@@ -1,0 +1,388 @@
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+    background-image: url("/Home/Home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    margin-top: -40px;
+
+    span {
+        margin-top: -40px;
+        font-family: "Amatic SC";
+        font-size: 3rem;
+    }
+
+    .action-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+        gap: 30px;
+        button {
+            padding: 10px 30px;
+            border-radius: 15px;
+            border: 1px solid #fff;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    }
+    .action-btns {
+        button:nth-child(1) {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+
+.home-section::after {
+    content: "";
+    width: 100%;
+    height: 8%;
+    top: 960px;
+    left: 0;
+    position: absolute;
+    background-image: url("/Home/underL.png");
+    background-repeat: repeat-x;
+    z-index: 213;
+}
+
+.about-section {
+    height: 1050px;
+    background: rgb(250, 102, 2);
+    background: linear-gradient(90deg, rgba(250, 102, 2, 0.5326505602240896) 0%, rgba(250, 102, 2, 1) 77%);
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    h2 {
+        font-size: 7rem;
+        position: relative;
+    }
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        margin-top: 50px;
+        .about-text {
+            position: relative;
+            .text-about {
+                max-width: 900px;
+                padding: 15px;
+                background-color: #fff;
+            }
+        }
+
+        .about-location {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 2.56rem;
+                color: aliceblue;
+            }
+        }
+
+        .about-cons {
+            margin-top: 100px;
+            max-width: 600px;
+            position: relative;
+            margin-top: 50px;
+            span {
+                font-size: 2.56rem;
+                color: aliceblue;
+            }
+
+            ul {
+                padding-left: 120px;
+                text-align: left;
+            }
+            li {
+                list-style-type: decimal-leading-zero;
+                font-size: 2.1rem;
+            }
+        }
+
+        .heart {
+            margin-left: -130px;
+        }
+
+        .about-woman {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+.about-section::after {
+    content: "";
+    width: 100%;
+    height: 8%;
+    top: 990px;
+    left: 0;
+    position: absolute;
+    background-image: url("/Home/underLW.png");
+    background-repeat: repeat-x;
+}
+
+.steps-section {
+    margin-top: 80px;
+    h2 {
+        text-align: center;
+        font-size: 96px;
+    }
+
+    .shoot-steps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        .shoot-step {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+            max-width: 650px;
+            min-height: 300px;
+            padding: 15px;
+            span {
+                font-size: 76px;
+                font-family: "Rubik Doodle Shadow";
+            }
+
+            .step-info {
+                strong {
+                    color: #fa6602;
+                    font-size: 52px;
+                }
+
+                button {
+                    color: aliceblue;
+                    padding: 16px 59px;
+                    background-color: #fa6602;
+                    border-radius: 35px;
+                    margin-top: 20px;
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+
+                button:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .shoot-step:nth-child(2n) {
+            span {
+                font-size: 82px;
+            }
+        }
+    }
+}
+
+.gallery-section {
+    margin-top: 120px;
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .gallery :nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .gallery :nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .gallery :nth-child(3) {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .gallery :nth-child(4) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .gallery :nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .gallery :nth-child(6) {
+        grid-column: 6;
+        grid-row: 2;
+        margin-top: -100px;
+    }
+    .gallery :nth-child(7) {
+        grid-column: 7;
+        grid-row: 2;
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .gallery-section {
+        .gallery {
+            :nth-child(1) {
+                grid-row: span 2;
+            }
+            :nth-child(2) {
+                grid-column-start: 4;
+                grid-row-start: 1;
+            }
+            :nth-child(3) {
+                grid-column-start: 3;
+                grid-row-start: 1;
+            }
+            :nth-child(4) {
+                grid-column-start: 3;
+            }
+            :nth-child(5) {
+                grid-column-start: 4;
+                grid-row: 2;
+            }
+            :nth-child(6) {
+                grid-row: span 3 / span 3;
+                grid-column-start: 5;
+                grid-row-start: 1;
+            }
+            :nth-child(7) {
+                grid-row: span 2 / span 2;
+                grid-column-start: 6;
+                grid-row-start: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-cons::after {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-section {
+        .about-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-location {
+            margin-top: 50px;
+        }
+
+        .heart {
+            display: none;
+        }
+
+        .about-woman {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .home-section {
+        h1 {
+            display: flex;
+            flex-direction: column;
+            font-size: 8rem;
+        }
+    }
+    .gallery-section {
+        .gallery {
+            :nth-child(1) {
+                grid-column: span 3;
+                grid-row: span 2 / 1;
+            }
+            :nth-child(2) {
+                grid-column: span 3;
+                grid-row: span 2 / 1;
+            }
+            :nth-child(3) {
+                grid-column: span 3;
+                grid-row: span 2 / 3;
+            }
+            :nth-child(4) {
+                grid-column: span 3;
+                grid-row: span 7;
+            }
+            :nth-child(5) {
+                grid-column: span 3;
+                grid-row: 1;
+            }
+            :nth-child(6) {
+                grid-column: span 3;
+                grid-row: span 20;
+            }
+            :nth-child(7) {
+                grid-column: span 2 / 7;
+                grid-row: span 2 / 16;
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .home-section {
+        span {
+            font-size: 2.3rem;
+            margin-top: 10px;
+        }
+        .action-btns {
+            margin-top: 30px;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .about-section {
+        height: 1400px;
+    }
+    .about-section::after {
+        top: 1330px;
+    }
+    .steps-section {
+        .shoot-step{
+            flex-direction: column;
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+    .gallery-section {
+        .gallery {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            :nth-child(6) {
+                margin-top: 20px;
+            }
+            :nth-child(7) {
+                margin-top: 20px;
+            }
+        }
+    }
+}
