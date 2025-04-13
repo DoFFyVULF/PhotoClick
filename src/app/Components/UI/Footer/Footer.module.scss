@@ -1,0 +1,98 @@
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: "Amatic SC";
+  
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: flex-start;
+  
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    &__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    &__logo {
+      font-size: 98px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+  
+    &__slogan {
+      font-size: 34px;
+      opacity: 0.7;
+      line-height: 1.5;
+      max-width: 300px;
+    }
+  
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    &__sectionTitle {
+      font-size: 58px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+  
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 25px;
+  
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  
+    &__social {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+  
+      a {
+        color: #fff;
+        font-size: 22px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  
+    &__copyright {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.5;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
